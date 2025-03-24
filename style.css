@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.hadder{
+    width: 100%;
+    position: absolute;
+    inset: 0 0 auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A47DAB;
+    backdrop-filter: blur(30px);
+    overflow: hidden;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 10px 0 10px 10px;
+}
+
+.rightside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-right: 30px;
+}
+
+.home, .help{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.home{
+    font-family: "nunito";
+    border-bottom: 1px solid white;
+}
+
+.help{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.help>img{
+    width: 30px;
+    background-color: white;
+    padding: 2px;
+    border-radius: 50px;
+}
+
+.hero{
+    width: 100%;
+    height: 85%;
+    /* background: url("images/background.jpg") no-repeat center/cover;\ */
+    background-color: #692475;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+h1{
+    color: white;
+    font-size: 44px;
+    line-height: 75px;
+    word-spacing: 5px;
+    width: 70%;
+    text-align: center;
+    margin: 10% auto 30px;
+}
+
+.inputarea{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.inputbox{
+    height: 40px;
+    width: 350px;
+    font-size: 20px;
+    padding: 0 10px;
+    box-shadow: 0 1px 5px black;
+    border: none;
+    outline: none;
+    background: transparent;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    color: black;
+    flex-shrink: 0;
+    background-color: white;
+}
+
+label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.search{
+    font-size: 15px;
+    padding: 10px 60px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #5200FF;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.result{
+    width: 100%;
+    flex-grow: 1;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 60px;
+}
+
+@keyframes floteUp {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card{
+    max-width: 300px;
+    height: fit-content;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow-x: hidden;
+    animation: floteUp 1s ease-in-out forwards;
+}
+
+.card:hover{
+    box-shadow: 0 5px 10px black;
+}
+
+
+.card>img{
+    max-height: 40%;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px 0 20px 10px;
+    max-width: 300px;
+    height: auto;
+}
+
+.phoneicons>a>img{
+    width: 45px;
+}
+
+.phoneicons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.notingEntered{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    display: none;
+}
