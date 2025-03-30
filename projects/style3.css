@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-family: 'Nunito';
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    background: radial-gradient(circle, #5A189A, #3C096C, #240046);
+}
+
+.container, .UiLinks{
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px 0;
+}
+
+.UiLinks{
+    padding-bottom:200px;
+}
+
+@keyframes floteRight {
+    from{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floteLeft {
+    from{
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.card{
+    background-color: #f5f5dc;
+    border: 1px solid black;
+    /* box-shadow: 0px 5px 50px #3a0ca3 inset; */
+    width: 50%;
+    padding: 30px 40px;
+    margin: 30px;
+    border-radius: 24px;
+}
+
+.right{
+    opacity: 0;
+    animation: floteRight .5s ease-in-out forwards;
+    animation-timeline: view(50% 5%);
+}
+
+.left{
+    opacity: 0;
+    animation: floteLeft .5s ease-in-out forwards;
+    animation-timeline: view(50% 5%);
+}
+
+.first{
+    animation: floteRight .5s ease-in-out forwards;
+}
+
+.second{
+    animation: floteLeft .5s ease-in-out forwards;
+}
+
+.content>h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+    border-bottom: 2px solid black;
+    width: fit-content;
+    padding-bottom: 5px;
+
+}
+
+.content>p{
+    line-height: 30px;
+    font-size: 25px;
+    margin-left: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+@keyframes floteUp{
+    from{
+        transform: translateY(50px) scale(.3);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.ui{
+    font-size: 30px;
+    margin: 10px auto;
+    text-align: center;
+    color: wheat;
+    border-bottom: 1px solid white;
+    width: 80%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 3px;
+}
+
+.add{
+    margin-top: 50px;
+}
+
+.flote{
+    opacity: 0;
+    animation: floteUp forwards;
+    animation-timeline: view(50% 0%);
+}

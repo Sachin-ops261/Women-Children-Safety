@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: whitesmoke;
+}
+
+.conteiner{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* background: url("/images/Aboutmeback.jpg") no-repeat center/cover; */
+    background:linear-gradient(to right, #0096c7, #c2c5aa);
+    align-items: center;
+}
+
+.content,.image{
+    flex-basis: 50%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 20px;
+}
+
+.content *{
+    font-size: 25px;
+}
+
+.content>.intro{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+@keyframes floteRight {
+    from{
+        transform: translateX(-750px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.project, .about{
+    transform: translateX(-750px);
+    animation: floteRight .7s ease-in 1s forwards;
+}
+
+.about{
+    animation-delay: .5s;
+}
+
+.project,.about{
+    padding: 5px 40px;
+    background-color: white;
+    color: blueviolet;
+    font-weight: bold;
+    box-shadow: 2px 5px 10px black;
+    border-radius: 30px;
+}
+
+.project:hover, .about:hover{
+    box-shadow: 5px 10px 10px black;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes flote {
+    0%{
+        transform: translateY(0) rotate(-45deg);
+    }
+    50%{
+        transform: translateY(-20px) rotate(-45deg);
+    }
+    100%{
+        transform: translateY(0) rotate(-45deg);
+    }
+}
+
+.imageContainer {
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    border: 10px solid blueviolet;
+    border-top: none;
+    border-right: none;
+    position: relative;
+    overflow: hidden;
+    animation: flote 2s ease-in-out infinite;
+}
+
+.imageContainer img {
+    width: 140%;
+    height: 140%;
+    object-fit: cover;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -20%;
+    left: -20%;
+}
+
+@keyframes fadeIn {
+    from{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content>p{
+    opacity: 0;
+    animation: fadeIn 1s ease-out .2s forwards;
+}

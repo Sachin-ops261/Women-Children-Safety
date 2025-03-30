@@ -70,7 +70,7 @@
 
 .hero{
     width: 100%;
-    height: 85%;
+    height: 100%;
     /* background: url("images/background.jpg") no-repeat center/cover;\ */
     background-color: #692475;
     display: flex;
@@ -100,7 +100,7 @@ h1{
     background: rgba(255, 255, 255, .3);
     backdrop-filter: blur(10px);
     padding: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .inputbox{
@@ -141,72 +141,6 @@ label{
     align-items: center;
     justify-content: center;
     gap: 5px;
-}
-
-.result{
-    width: 100%;
-    flex-grow: 1;
-    padding: 100px 50px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 60px;
-}
-
-@keyframes floteUp {
-    from{
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.card{
-    max-width: 300px;
-    height: fit-content;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    overflow-x: hidden;
-    animation: floteUp 1s ease-in-out forwards;
-}
-
-.card:hover{
-    box-shadow: 0 5px 10px black;
-}
-
-
-.card>img{
-    max-height: 40%;
-    border-bottom: 1px solid black;
-    width: 100%;
-}
-
-.content{
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin: 20px 0 20px 10px;
-    max-width: 300px;
-    height: auto;
-}
-
-.phoneicons>a>img{
-    width: 45px;
-}
-
-.phoneicons{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    margin-top: 20px;
 }
 
 .notingEntered{
